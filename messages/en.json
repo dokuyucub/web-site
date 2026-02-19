@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "bio": "Bio",
+    "contact": "Contact",
+    "journal": "Journal"
+  },
+  "home": {
+    "scrollHint": "Explore"
+  },
+  "cursor": {
+    "open": "Open",
+    "view": "View"
+  },
+  "project": {
+    "year": "Year",
+    "category": "Category",
+    "tools": "Tools",
+    "viewLive": "View Live",
+    "close": "Close",
+    "passwordProtected": "This project is password protected",
+    "enterPassword": "Enter password",
+    "unlock": "Unlock",
+    "wrongPassword": "Wrong password"
+  },
+  "about": {
+    "downloadCV": "Download CV",
+    "availability": {
+      "available": "Available",
+      "limited": "Limited",
+      "unavailable": "Unavailable"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "copyEmail": "Copy Email",
+    "copied": "Copied!",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Message",
+      "budget": "Budget Range",
+      "budgetOptions": {
+        "placeholder": "Select Budget",
+        "small": "< $500",
+        "medium": "$500 – $2,000",
+        "large": "$2,000 – $5,000",
+        "enterprise": "$5,000+"
+      },
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message received! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "readMore": "Read More",
+    "readingTime": "{minutes} min read"
+  },
+  "loading": "Loading"
+}

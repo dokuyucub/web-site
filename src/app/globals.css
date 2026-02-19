@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ───────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    /* Dark mode (default) */
+    --color-bg: #080808;
+    --color-bg-secondary: #0f0f0f;
+    --color-fg: #fafaf9;
+    --color-fg-secondary: #a0a0a0;
+    --color-accent: #ffffff;
+    --color-muted: #444444;
+    --color-border: #1c1c1c;
+    --color-overlay: rgba(8, 8, 8, 0.85);
+
+    /* Availability colors */
+    --color-available: #22c55e;
+    --color-limited: #eab308;
+    --color-unavailable: #ef4444;
+
+    /* Typography Scale */
+    --text-hero: clamp(3.5rem, 10vw, 9rem);
+    --text-display: clamp(2rem, 5vw, 4.5rem);
+    --text-heading: clamp(1.25rem, 2vw, 1.75rem);
+    --text-body: clamp(0.9375rem, 1.2vw, 1.0625rem);
+    --text-small: 0.8125rem;
+    --text-mono: 0.8125rem;
+
+    /* Spacing */
+    --nav-height: 3.5rem;
+
+    /* Animation */
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Z-index layers */
+    --z-canvas: 0;
+    --z-overlay: 10;
+    --z-panel: 20;
+    --z-nav: 30;
+    --z-cursor: 100;
+    --z-loading: 200;
+  }
+
+  .light {
+    --color-bg: #f8f7f4;
+    --color-bg-secondary: #f0ede8;
+    --color-fg: #0a0a0a;
+    --color-fg-secondary: #666666;
+    --color-accent: #0a0a0a;
+    --color-muted: #999999;
+    --color-border: #e0ddd8;
+    --color-overlay: rgba(248, 247, 244, 0.85);
+  }
+}
+
+/* ─── Base Reset ──────────────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    overflow: hidden;
+    cursor: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: auto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (pointer: coarse) {
+    body {
+      cursor: auto;
+      overflow: auto;
+    }
+  }
+}
+
+/* ─── Layout Utilities ────────────────────────────────────────────────────── */
+@layer components {
+  .canvas-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-canvas);
+  }
+
+  .dom-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    pointer-events: none;
+  }
+
+  .dom-overlay > * {
+    pointer-events: auto;
+  }
+
+  .panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: min(640px, 92vw);
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-border);
+    z-index: var(--z-panel);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .panel-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: calc(var(--z-panel) - 1);
+  }
+}
+
+/* ─── Typography Utilities ───────────────────────────────────────────────── */
+@layer utilities {
+  .text-hero { font-size: var(--text-hero); }
+  .text-display { font-size: var(--text-display); }
+  .text-heading { font-size: var(--text-heading); }
+  .text-body-sz { font-size: var(--text-body); }
+  .text-sz-small { font-size: var(--text-small); }
+  .text-sz-mono { font-size: var(--text-mono); }
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}

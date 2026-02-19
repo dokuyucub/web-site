@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "bio": "Bio",
+    "contact": "İletişim",
+    "journal": "Journal"
+  },
+  "home": {
+    "scrollHint": "Keşfet"
+  },
+  "cursor": {
+    "open": "Aç",
+    "view": "Gör"
+  },
+  "project": {
+    "year": "Yıl",
+    "category": "Kategori",
+    "tools": "Araçlar",
+    "viewLive": "Canlı Gör",
+    "close": "Kapat",
+    "passwordProtected": "Bu proje şifre korumalıdır",
+    "enterPassword": "Şifreyi girin",
+    "unlock": "Kilidi Aç",
+    "wrongPassword": "Yanlış şifre"
+  },
+  "about": {
+    "downloadCV": "CV İndir",
+    "availability": {
+      "available": "Müsait",
+      "limited": "Kısıtlı",
+      "unavailable": "Müsait Değil"
+    }
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "copyEmail": "E-postayı Kopyala",
+    "copied": "Kopyalandı!",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "budget": "Bütçe Aralığı",
+      "budgetOptions": {
+        "placeholder": "Bütçe Seçin",
+        "small": "< 5.000₺",
+        "medium": "5.000₺ – 20.000₺",
+        "large": "20.000₺ – 50.000₺",
+        "enterprise": "50.000₺+"
+      },
+      "send": "Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajın alındı! En kısa sürede döneceğim.",
+      "error": "Bir hata oluştu. Tekrar dene."
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "readMore": "Devamını Oku",
+    "readingTime": "{minutes} dk okuma"
+  },
+  "loading": "Yükleniyor"
+}
